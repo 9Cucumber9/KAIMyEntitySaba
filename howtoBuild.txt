@@ -1,0 +1,16 @@
+git clone https://github.com/benikabocha/saba && \
+git clone https://github.com/bulletphysics/bullet3 && \
+cd bullet3 && \
+cmake ./ \
+-DBUILD_CPU_DEMOS=OFF \
+-DBUILD_PYBULLET=OFF \
+-DBUILD_BULLET3=OFF \
+-DBUILD_BULLET2_DEMOS=OFF \
+-DBUILD_EXTRAS=OFF \
+-DBUILD_UNIT_TESTS=OFF \
+-DCMAKE_POSITION_INDEPENDENT_CODE=ON \
+-DCMAKE_INSTALL_PREFIX="output/" && \
+make install && \
+cd ../ && \
+cmake ./ && \
+make
